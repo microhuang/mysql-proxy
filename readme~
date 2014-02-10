@@ -1,0 +1,8 @@
+
+libtool : X--tag=CC: command not found 编译报错 
+
+原因是因为在项目目录下生成的libtool脚本中定义了$ECHO变量，但是在脚本文件ltmain.sh中，使用的却是$echo（生成的libtool版本太旧）
+
+解决方案
+
+ export echo=echo  回车后 make  正常

@@ -1,0 +1,2 @@
+mysql_la-sql-tokenizer-keywords.lo \
+  .libs/mysql_la-sql-tokenizer-keywords.o: sql-tokenizer-keywords.c
