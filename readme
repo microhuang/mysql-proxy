@@ -55,3 +55,5 @@ if s.type == proxy.BACKEND_TYPE_RW and s.state ~= proxy.BACKEND_STATE_DOWN and c
  proxy.connection.backend_ndx = i
  proxy.global.config.rwsplit.fix = 1
  break
+
+idle_failsafe_rw提供写灾备，idle_ro提供读均衡（有bug？）
