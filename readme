@@ -8,3 +8,25 @@ libtool : X--tag=CC: command not found 编译报错
  export echo=echo  
 
 回车后 make  正常
+
+
+参数示例：
+
+--plugin-dir=mysql-proxy-0.8.4/lib/mysql-proxy/plugins
+
+--plugins=proxy
+
+--proxy-lua-script=mysql-proxy-0.8.4/share/doc/mysql-proxy/rw-splitting.lua
+--proxy-address=127.0.0.1:4040
+--proxy-backend-addresses=127.0.0.1:3306
+--proxy-read-only-backend-addresses=127.0.0.1:3306
+
+--plugins=admin
+
+--admin-lua-script=mysql-proxy-0.8.4/lib/mysql-proxy/lua/admin.lua
+--admin-address=127.0.0.1:4041
+--admin-username=root
+--admin-password=123456
+
+--daemon
+--log-file=/tmp/mysql-proxy.log
