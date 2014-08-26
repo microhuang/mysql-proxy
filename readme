@@ -40,3 +40,18 @@ proxy.global.config.rwsplit = {
  max_idle_connections = 8,
  is_debug = false
 }
+
+
+rw-splitting最少连接bug修复：
+
+proxy.global.config.rwsplit = {
+ min_idle_connections = 4,     
+ max_idle_connections = 8,
+ fix=0,
+ is_debug = false
+}
+
+if s.type == proxy.BACKEND_TYPE_RW and s.state ~= proxy.BACKEND_STATE_DOWN and cur_idle + proxy.global.config.rwsplit.fix < pool.min_idle_connections then
+ proxy.connection.backend_ndx = i
+ proxy.global.config.rwsplit.fix = 1
+ break
