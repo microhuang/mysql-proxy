@@ -32,10 +32,10 @@ libtool : X--tag=CC: command not found 编译报错
 --log-file=/tmp/mysql-proxy.log
 
 
-脚本解读：
+rw-splitting脚本解读：
 
 proxy.global.config.rwsplit = {
- min_idle_connections = 4,        -- 最少4+1个连接之后建立新的连接。bug？
+ min_idle_connections = 4,        -- 最少min_idle_connections+1个连接之后建立新的连接。bug？
  max_idle_connections = 8,
  is_debug = false
 }
