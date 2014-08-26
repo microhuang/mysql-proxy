@@ -18,8 +18,9 @@ libtool : X--tag=CC: command not found 编译报错
 
 --proxy-lua-script=mysql-proxy-0.8.4/share/doc/mysql-proxy/rw-splitting.lua
 --proxy-address=127.0.0.1:4040
---proxy-backend-addresses=127.0.0.1:3306
---proxy-read-only-backend-addresses=127.0.0.1:3306
+--proxy-backend-addresses=127.0.0.1:3307
+--proxy-read-only-backend-addresses=127.0.0.1:3308
+--proxy-read-only-backend-addresses=127.0.0.1:3309
 
 --plugins=admin
 
